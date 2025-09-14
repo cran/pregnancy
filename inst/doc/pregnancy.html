@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>pregnancy</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">pregnancy</h1>
+
+
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(pregnancy)</span></code></pre></div>
+<p>This is an R package for calculating dates and tracking medications
+during pregnancy and fertility treatment. It extends a private, personal
+package that I wrote for myself when I was pregnant. It contains
+functions and features that I found useful at the time, and others that
+I added when adapting the package for general use.</p>
+<p>The functionality goes beyond what’s offered by online pregnancy
+calculators and apps, plus there are no concerns (unlike with these
+sites and apps) about data privacy, tracking or advertising.</p>
+<div id="date-calculations" class="section level2">
+<h2>Date calculations</h2>
+<p>The <strong>pregnancy</strong> package uses dates extensively. Any
+function argument that requires a date can either take a
+<code>Date</code> object<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>, or a character string that can be parsed
+to a <code>Date</code>, e.g. <code>&quot;YYYY-MM-DD&quot;</code>. The parsing is
+performed by <code>anytime::anydate()</code>.</p>
+<p>The <code>calculate_due_date()</code> function estimates the
+pregnancy due date. The <code>start_date</code> is interpreted
+differently, depending on the <code>start_type</code>. By default, the
+<code>start_type</code> is the last menstrual period, and the
+<code>start_date</code> is the date this started. Other
+<code>start_date</code> options, like various transfer days, are useful
+for those using IVF.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># invisibly returns a Date object with the estimated due date</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>due_date <span class="ot">&lt;-</span> <span class="fu">calculate_due_date</span>(<span class="st">&quot;2025-02-24&quot;</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co">#&gt; ℹ Estimated due date: Monday, December 01, 2025</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co">#&gt; ℹ Estimated birth period begins: November 10, 2025 (37 weeks)</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="co">#&gt; ℹ Estimated birth period ends: December 15, 2025 (42 weeks)</span></span></code></pre></div>
+<p>Once a due date is know, <code>how_far()</code> tells you how far
+along the pregnancy is on a given date. It defaults to providing this
+information for the current date, but an alternative
+<code>on_date</code> can be provided. This vignette was built on
+<strong>September 09, 2025</strong>, so for the purposes of reading this
+article, that counts as “today”.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">how_far</span>(<span class="at">due_date =</span> due_date)</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="co">#&gt; ℹ You are 28 weeks and 1 day pregnant.</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 11 weeks and 6 days until the due date (December 01, 2025).</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">#&gt; ℹ You are 70% through the pregnancy.</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="fu">how_far</span>(<span class="at">on_date =</span> <span class="st">&quot;2025-09-17&quot;</span>, <span class="at">due_date =</span> due_date)</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">#&gt; ℹ On September 17, 2025, you will be 29 weeks and 2 days pregnant.</span></span></code></pre></div>
+<p>The <code>date_when()</code> function gives the date when a certain
+week of pregnancy will be (or was) reached, and the duration of that
+date from today:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">date_when</span>(<span class="dv">33</span>, <span class="at">due_date =</span> due_date)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="co">#&gt; ℹ On October 13, 2025, you will be 33 weeks pregnant.</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 4 weeks and 6 days away.</span></span></code></pre></div>
+<p>By default, the output messages from <code>how_far()</code> and
+<code>date_when()</code> are in the second person, i.e. addressed to
+“you”, but there is also an option to specify another person. A value of
+<code>1</code> or <code>&quot;I&quot;</code> means you’ll be addressed in the
+first person:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">how_far</span>(<span class="at">due_date =</span> due_date, <span class="at">person =</span> <span class="dv">1</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="co">#&gt; ℹ I am 28 weeks and 1 day pregnant.</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 11 weeks and 6 days until the due date (December 01, 2025).</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">#&gt; ℹ I am 70% through the pregnancy.</span></span></code></pre></div>
+<p>Any other character string will be interpreted as a third-person
+name, which is useful, for example, if you’re following the pregnancy
+progress of a partner:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">date_when</span>(<span class="dv">33</span>, <span class="at">due_date =</span> due_date, <span class="at">person =</span> <span class="st">&quot;Ruth&quot;</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="co">#&gt; ℹ On October 13, 2025, Ruth will be 33 weeks pregnant.</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 4 weeks and 6 days away.</span></span></code></pre></div>
+<p>There is one further date-related function in the package, which is
+useful if you are not yet pregnant but think there’s a chance you might
+be, e.g. if you are undergoing fertility treatment. This is
+<code>calculate_test_date()</code>, which calculates the recommended
+date for taking a pregnancy test, based on start date (e.g. start of
+last menstural period) and test type:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">calculate_test_date</span>(<span class="st">&quot;2025-08-21&quot;</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="co">#&gt; ℹ Estimated test date (urine): Thursday, September 18, 2025</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="co">#&gt; ℹ Estimated test date (blood): Tuesday, September 16, 2025</span></span></code></pre></div>
+</div>
+<div id="tracking-medications" class="section level2">
+<h2>Tracking medications</h2>
+<p>For those who get pregnant via fertility treatment, it is likely they
+need to take a number of different medications to support the pregnancy.
+Having functionality for tracking these is useful for both practical and
+emotional reasons. When I was pregnant, in my personal, private
+pregnancy package, whenever I called my version of <code>how_far</code>,
+it would print a message with how many injections I had already endured,
+and how many I had left to go, which helped me get through them.</p>
+<p>I haven’t written that functionality into <code>how_far()</code> in
+this generalised version of the pregnancy package, but I have provided a
+separate <code>medications_remaining()</code> function to keep track of
+medications. It requires a data frame of medications, which must have
+the following columns with the specified data types:</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column name</th>
+<th>Data type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>medication</td>
+<td>character or factor</td>
+<td>name of the medication</td>
+</tr>
+<tr class="even">
+<td>format</td>
+<td>character or factor</td>
+<td>format of the medication (e.g. pill, injection)</td>
+</tr>
+<tr class="odd">
+<td>quantity</td>
+<td>numeric</td>
+<td>number of units to take per day</td>
+</tr>
+<tr class="even">
+<td>start_date</td>
+<td>Date or string representing a date, e.g. “YYYY-MM-DD”</td>
+<td>date to start taking the medication</td>
+</tr>
+<tr class="odd">
+<td>stop_date</td>
+<td>Date or string representing a date, e.g. “YYYY-MM-DD”</td>
+<td>final date on which medication is taken</td>
+</tr>
+</tbody>
+</table>
+<p>Note that if the quantity of a given medication changes during the
+pregnancy, you need separate rows with the start and stop dates for each
+quantity.</p>
+<p>Here’s an example of what a small <code>medications</code> table
+might look like (a larger example table is provided in the package as
+<code>pregnancy::medications</code>):</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co"># a simplified medication schedule</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>meds <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">tribble</span>(</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>  <span class="sc">~</span>medication, <span class="sc">~</span>format, <span class="sc">~</span>quantity, <span class="sc">~</span>start_date, <span class="sc">~</span>stop_date,</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>  <span class="st">&quot;progynova&quot;</span>, <span class="st">&quot;tablet&quot;</span>, <span class="dv">3</span>, <span class="st">&quot;2025-08-21&quot;</span>, <span class="st">&quot;2025-08-31&quot;</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>  <span class="st">&quot;progynova&quot;</span>, <span class="st">&quot;tablet&quot;</span>, <span class="dv">6</span>, <span class="st">&quot;2025-09-01&quot;</span>, <span class="st">&quot;2025-09-11&quot;</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>  <span class="st">&quot;cyclogest&quot;</span>, <span class="st">&quot;pessary&quot;</span>, <span class="dv">2</span>, <span class="st">&quot;2025-09-03&quot;</span>, <span class="st">&quot;2025-09-11&quot;</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>  <span class="st">&quot;clexane&quot;</span>, <span class="st">&quot;injection&quot;</span>, <span class="dv">1</span>, <span class="st">&quot;2025-09-08&quot;</span>, <span class="st">&quot;2025-11-05&quot;</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>)</span></code></pre></div>
+<p>You can then calculate the quantity of medications left to take
+grouped by either by medication (default) or format. By default, the
+calculation is for today (i.e. <code>on_date</code> =
+<code>Sys.Date()</code>). The resulting table assumes that the function
+is being called first thing in the day, i.e. before any of
+<code>on_date</code>’s medications have been taken.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">medications_remaining</span>(meds)</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="co">#&gt; # A tibble: 3 × 2</span></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="co">#&gt;   medication quantity</span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;         &lt;int&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="co">#&gt; 1 clexane          58</span></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="co">#&gt; 2 cyclogest         6</span></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a><span class="co">#&gt; 3 progynova        18</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">medications_remaining</span>(meds, <span class="at">group =</span> <span class="st">&quot;format&quot;</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="co">#&gt; # A tibble: 3 × 2</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="co">#&gt;   format    quantity</span></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;        &lt;int&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="co">#&gt; 1 injection       58</span></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="co">#&gt; 2 pessary          6</span></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="co">#&gt; 3 tablet          18</span></span></code></pre></div>
+<p>You can specify a value other than today for <code>on_date</code>, as
+well as an <code>until_date</code>. This is useful if you need (as I
+did) to order a couple of week’s medication at the time, and have to
+tell the pharmacy exactly what you need:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">medications_remaining</span>(</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>  meds,</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>  <span class="at">on_date =</span> <span class="st">&quot;2025-09-01&quot;</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>  <span class="at">until_date =</span> <span class="st">&quot;2025-09-14&quot;</span></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>)</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a><span class="co">#&gt; # A tibble: 3 × 2</span></span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="co">#&gt;   medication quantity</span></span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;         &lt;int&gt;</span></span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a><span class="co">#&gt; 1 clexane           7</span></span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a><span class="co">#&gt; 2 cyclogest        18</span></span>
+<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a><span class="co">#&gt; 3 progynova        66</span></span></code></pre></div>
+</div>
+<div id="global-options" class="section level2">
+<h2>Global options</h2>
+<p>It would be very tedious to have to enter a due date every time you
+call <code>how_far()</code> or <code>date_when()</code> over the course
+of a pregnancy, especially since that date is constant throughout. The
+same goes for the medications table required for
+<code>medications_remaining()</code>.</p>
+<p>To avoid this, the pregnancy package makes use of <strong>global
+options</strong>, which can be set with the <code>set_*</code> family of
+functions (<code>set_due_date()</code>, <code>set_person()</code>,
+<code>set_medications()</code>). These functions only set the options
+for the current R session.</p>
+<p>To ensure the options persist across all R sessions, we suggest
+setting them in your <code>.Rprofile</code>, and give an example at the
+end of this vignette.</p>
+<p>Global options can be retrieved with the <code>get_*</code> family of
+functions (<code>get_due_date()</code>, <code>get_person()</code>,
+<code>get_medications()</code>).</p>
+<p>Any global option can be unset by calling its <code>set_*</code>
+function with the argument <code>NULL</code>.</p>
+<div id="pregnancy.due_date" class="section level3">
+<h3><code>pregnancy.due_date</code></h3>
+<p>You can set the <code>pregnancy.due_date</code> option using the
+<code>set_due_date()</code> function.</p>
+<p>When that option is set, if the <code>due_date</code> argument to
+<code>how_far()</code> or <code>date_when()</code> is <code>NULL</code>
+(the default), that option is retrieved.</p>
+<p><code>set_due_date()</code> only sets the due date for the current R
+session. To make this option persist (recommended), it can be added to
+your <code>.Rprofile</code>. The console output of
+<code>set_due_date()</code> provides guidance on how to do this.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co"># can be intentional about creating a Date object</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>due_date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">&quot;2026-01-22&quot;</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="fu">set_due_date</span>(due_date)</span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="co">#&gt; ✔ Due date set as January 22, 2026</span></span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="co">#&gt; ℹ Functions in the pregnancy package will now use this `due_date` option.</span></span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a><span class="co">#&gt; ℹ So, for this R session, you do not need to supply a value to the `due_date`</span></span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a><span class="co">#&gt;   argument (unless you wish to override the option).</span></span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a><span class="co">#&gt; ℹ To make this `due_date` option available in all R sessions, in your</span></span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a><span class="co">#&gt;   &quot;.Rprofile&quot;, set `options(pregnancy.due_date = ...)`</span></span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a><span class="co">#&gt;   where ... is the value of `due_date`.</span></span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a><span class="co">#&gt; ℹ You can edit your &quot;.Rprofile&quot; by calling `usethis::edit_r_profile()`</span></span>
+<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a><span class="co">#&gt; ℹ You can retrieve the `due_date` option with `get_due_date()`,</span></span>
+<span id="cb12-13"><a href="#cb12-13" tabindex="-1"></a><span class="co">#&gt;   or with `getOption(&#39;pregnancy.due_date&#39;)`.</span></span></code></pre></div>
+<p>Then <code>how_far()</code> can be called without needing to specify
+any arguments, and <code>date_when()</code> only needs the target
+week:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">how_far</span>()</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="co">#&gt; ℹ You are 20 weeks and 5 days pregnant.</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 19 weeks and 2 days until the due date (January 22, 2026).</span></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="co">#&gt; ℹ You are 52% through the pregnancy.</span></span></code></pre></div>
+<p>To check what the option is set to, use
+<code>get_due_date()</code>.</p>
+</div>
+<div id="pregnancy.person" class="section level3">
+<h3><code>pregnancy.person</code></h3>
+<p><code>set_person()</code> sets the global option
+<code>pregnancy.person</code> for the current R session. If this option
+is set it will be retrieved to specify the value of <code>person</code>
+in <code>how_far()</code> and <code>date_when()</code>, unless it is
+overriden by passing another value directly to the <code>person</code>
+argument. If the option is not set, the default second-person will be
+used.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">set_person</span>(<span class="dv">1</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="co">#&gt; ✔ person set as &#39;I&#39;</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="co">#&gt; ℹ Functions in the pregnancy package will now use this `person` option.</span></span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a><span class="co">#&gt; ℹ So, for this R session, you do not need to supply a value to the `person`</span></span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a><span class="co">#&gt;   argument (unless you wish to override the option).</span></span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a><span class="co">#&gt; ℹ To make this `person` option available in all R sessions, in your</span></span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a><span class="co">#&gt;   &quot;.Rprofile&quot;, set `options(pregnancy.person = ...)`</span></span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a><span class="co">#&gt;   where ... is the value of `person`.</span></span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1"></a><span class="co">#&gt; ℹ You can edit your &quot;.Rprofile&quot; by calling `usethis::edit_r_profile()`</span></span>
+<span id="cb14-10"><a href="#cb14-10" tabindex="-1"></a><span class="co">#&gt; ℹ You can retrieve the `person` option with `get_person()`,</span></span>
+<span id="cb14-11"><a href="#cb14-11" tabindex="-1"></a><span class="co">#&gt;   or with `getOption(&#39;pregnancy.person&#39;)`.</span></span>
+<span id="cb14-12"><a href="#cb14-12" tabindex="-1"></a><span class="fu">how_far</span>() <span class="co"># due_date option still set from previous section</span></span>
+<span id="cb14-13"><a href="#cb14-13" tabindex="-1"></a><span class="co">#&gt; ℹ I am 20 weeks and 5 days pregnant.</span></span>
+<span id="cb14-14"><a href="#cb14-14" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 19 weeks and 2 days until the due date (January 22, 2026).</span></span>
+<span id="cb14-15"><a href="#cb14-15" tabindex="-1"></a><span class="co">#&gt; ℹ I am 52% through the pregnancy.</span></span>
+<span id="cb14-16"><a href="#cb14-16" tabindex="-1"></a><span class="fu">set_person</span>(<span class="cn">NULL</span>)</span>
+<span id="cb14-17"><a href="#cb14-17" tabindex="-1"></a><span class="co">#&gt; ✔ pregnancy.person option set to NULL.</span></span>
+<span id="cb14-18"><a href="#cb14-18" tabindex="-1"></a><span class="co">#&gt; ℹ The `person` argument will now default to &quot;You&quot;.</span></span>
+<span id="cb14-19"><a href="#cb14-19" tabindex="-1"></a><span class="fu">how_far</span>()</span>
+<span id="cb14-20"><a href="#cb14-20" tabindex="-1"></a><span class="co">#&gt; ℹ You are 20 weeks and 5 days pregnant.</span></span>
+<span id="cb14-21"><a href="#cb14-21" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 19 weeks and 2 days until the due date (January 22, 2026).</span></span>
+<span id="cb14-22"><a href="#cb14-22" tabindex="-1"></a><span class="co">#&gt; ℹ You are 52% through the pregnancy.</span></span></code></pre></div>
+</div>
+<div id="pregnancy.medications" class="section level3">
+<h3><code>pregnancy.medications</code></h3>
+<p><code>set_medications()</code> sets the global option
+<code>pregnancy.medications</code> for the current R session.</p>
+<p>When that option is set, if the <code>meds</code> argument to
+<code>medications_remaining()</code> is <code>NULL</code> (the default),
+that option is retrieved.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">set_medications</span>(pregnancy<span class="sc">::</span>medications)</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="co">#&gt; ✔ medications set.</span></span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="co">#&gt; ℹ Functions in the pregnancy package will now use this `medications` option.</span></span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a><span class="co">#&gt; ℹ So, for this R session, you do not need to supply a value to the</span></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="co">#&gt;   `medications` argument (unless you wish to override the option).</span></span>
+<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a><span class="co">#&gt; ℹ To make this `medications` option available in all R sessions, in your</span></span>
+<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a><span class="co">#&gt;   &quot;.Rprofile&quot;, set `options(pregnancy.medications = ...)`</span></span>
+<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a><span class="co">#&gt;   where ... is the value of `medications`.</span></span>
+<span id="cb15-9"><a href="#cb15-9" tabindex="-1"></a><span class="co">#&gt; ℹ You can edit your &quot;.Rprofile&quot; by calling `usethis::edit_r_profile()`</span></span>
+<span id="cb15-10"><a href="#cb15-10" tabindex="-1"></a><span class="co">#&gt; ℹ You can retrieve the `medications` option with `get_medications()`,</span></span>
+<span id="cb15-11"><a href="#cb15-11" tabindex="-1"></a><span class="co">#&gt;   or with `getOption(&#39;pregnancy.medications&#39;)`.</span></span>
+<span id="cb15-12"><a href="#cb15-12" tabindex="-1"></a><span class="fu">medications_remaining</span>()</span>
+<span id="cb15-13"><a href="#cb15-13" tabindex="-1"></a><span class="co">#&gt; # A tibble: 5 × 2</span></span>
+<span id="cb15-14"><a href="#cb15-14" tabindex="-1"></a><span class="co">#&gt;   medication   quantity</span></span>
+<span id="cb15-15"><a href="#cb15-15" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;           &lt;int&gt;</span></span>
+<span id="cb15-16"><a href="#cb15-16" tabindex="-1"></a><span class="co">#&gt; 1 clexane            88</span></span>
+<span id="cb15-17"><a href="#cb15-17" tabindex="-1"></a><span class="co">#&gt; 2 cyclogest          66</span></span>
+<span id="cb15-18"><a href="#cb15-18" tabindex="-1"></a><span class="co">#&gt; 3 lubion             33</span></span>
+<span id="cb15-19"><a href="#cb15-19" tabindex="-1"></a><span class="co">#&gt; 4 prednisolone      153</span></span>
+<span id="cb15-20"><a href="#cb15-20" tabindex="-1"></a><span class="co">#&gt; 5 progynova         198</span></span></code></pre></div>
+</div>
+<div id="an-example-.rprofile" class="section level3">
+<h3>An example <code>.Rprofile</code></h3>
+<p>Taking the advice to specify the options in your
+<code>.Rprofile</code>, here’s an example of what that might look
+like:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="fu">options</span>(</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>  <span class="at">pregnancy.due_date =</span> <span class="st">&quot;2025-09-16&quot;</span>,</span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>  <span class="at">pregnancy.person =</span> <span class="st">&quot;I&quot;</span>, <span class="co"># addressed in first person</span></span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a>  <span class="at">pregnancy.medications =</span> dplyr<span class="sc">::</span><span class="fu">tribble</span>(</span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a>    <span class="sc">~</span>medication, <span class="sc">~</span>format, <span class="sc">~</span>quantity, <span class="sc">~</span>start_date, <span class="sc">~</span>stop_date,</span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a>    <span class="st">&quot;progynova&quot;</span>, <span class="st">&quot;tablet&quot;</span>, <span class="dv">3</span>, <span class="st">&quot;2025-04-21&quot;</span>, <span class="st">&quot;2025-04-30&quot;</span>,</span>
+<span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a>    <span class="st">&quot;progynova&quot;</span>, <span class="st">&quot;tablet&quot;</span>, <span class="dv">6</span>, <span class="st">&quot;2025-05-01&quot;</span>, <span class="st">&quot;2025-07-11&quot;</span>,</span>
+<span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a>    <span class="st">&quot;cyclogest&quot;</span>, <span class="st">&quot;pessary&quot;</span>, <span class="dv">2</span>, <span class="st">&quot;2025-05-03&quot;</span>, <span class="st">&quot;2025-07-11&quot;</span>,</span>
+<span id="cb16-9"><a href="#cb16-9" tabindex="-1"></a>    <span class="st">&quot;clexane&quot;</span>, <span class="st">&quot;injection&quot;</span>, <span class="dv">1</span>, <span class="st">&quot;2025-05-08&quot;</span>, <span class="st">&quot;2025-09-05&quot;</span></span>
+<span id="cb16-10"><a href="#cb16-10" tabindex="-1"></a>  )</span>
+<span id="cb16-11"><a href="#cb16-11" tabindex="-1"></a>)</span></code></pre></div>
+<p>Note that it is best to avoid creating R objects in your
+<code>.Rprofile</code>, e.g. a <code>medications</code> data frame
+outside of the call to <code>options()</code>, otherwise that object
+will be loaded into your global environment at the start of every R
+session.</p>
+</div>
+</div>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>There are many ways to create <code>Date</code> objects
+in R, including <code>as.Date()</code>, <code>lubridate::ymd()</code>,
+and <code>anytime::anydate()</code>.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
