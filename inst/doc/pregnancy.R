@@ -14,12 +14,18 @@ person_opt <- getOption("pregnancy.person")
 medications_opt <- getOption("pregnancy.medications")
 
 ## -----------------------------------------------------------------------------
+# for purpose of vignette, calculate `start_date` relative to "today"
+today <- Sys.Date()
+start_date <- today - 192
+
 # invisibly returns a Date object with the estimated due date
-due_date <- calculate_due_date("2025-02-24")
+# by default, start date of last menstrual period, but other options available
+# in practice, the start_date argument will be a known date, e.g. "2025-05-29"
+due_date <- calculate_due_date(start_date)
 
 ## -----------------------------------------------------------------------------
 how_far(due_date = due_date)
-how_far(on_date = "2025-09-17", due_date = due_date)
+how_far(on_date = today + 1, due_date = due_date)
 
 ## -----------------------------------------------------------------------------
 date_when(33, due_date = due_date)
@@ -31,17 +37,12 @@ how_far(due_date = due_date, person = 1)
 date_when(33, due_date = due_date, person = "Ruth")
 
 ## -----------------------------------------------------------------------------
-calculate_test_date("2025-08-21")
+calculate_test_date(today - 20)
 
 ## -----------------------------------------------------------------------------
 # a simplified medication schedule
-meds <- dplyr::tribble(
-  ~medication, ~format, ~quantity, ~start_date, ~stop_date,
-  "progynova", "tablet", 3, "2025-08-21", "2025-08-31",
-  "progynova", "tablet", 6, "2025-09-01", "2025-09-11",
-  "cyclogest", "pessary", 2, "2025-09-03", "2025-09-11",
-  "clexane", "injection", 1, "2025-09-08", "2025-11-05"
-)
+meds <- pregnancy:::update_meds_table(pregnancy::medications_simple)
+meds
 
 ## -----------------------------------------------------------------------------
 medications_remaining(meds)
@@ -52,17 +53,20 @@ medications_remaining(meds, group = "format")
 ## -----------------------------------------------------------------------------
 medications_remaining(
   meds,
-  on_date = "2025-09-01",
-  until_date = "2025-09-14"
+  on_date = today + 3,
+  until_date = today + 17
 )
 
 ## -----------------------------------------------------------------------------
-# can be intentional about creating a Date object
-due_date <- as.Date("2026-01-22")
+# a different due date from the earlier example
+due_date <- today + 180
 set_due_date(due_date)
 
 ## -----------------------------------------------------------------------------
 how_far()
+
+## -----------------------------------------------------------------------------
+date_when(20)
 
 ## -----------------------------------------------------------------------------
 set_person(1)
@@ -71,7 +75,7 @@ set_person(NULL)
 how_far()
 
 ## -----------------------------------------------------------------------------
-set_medications(pregnancy::medications)
+set_medications(pregnancy:::update_meds_table(pregnancy::medications))
 medications_remaining()
 
 ## ----echo = FALSE-------------------------------------------------------------
