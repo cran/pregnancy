@@ -1,7 +1,7 @@
-1765d48198d6067e0f025ced8031e4c7 *DESCRIPTION
+43f393fc19df83e17214d19e424e2f6b *DESCRIPTION
 621566d5bcbc9b8f291c5e01dea7b1df *LICENSE
 75a713abcbff7cdfce7155a03a1ae782 *NAMESPACE
-413da0c58a0614a794a17b5b7ee8c832 *NEWS.md
+37c9a2f4ec64b7d926b49de7a6ae70ba *NEWS.md
 e4f281ae76fa6e9703c70d61619d7ada *R/data.R
 98993ddc3ab8203ce8e9413c8c57f2e8 *R/date_when.R
 76f0eb40997a7dd5a9c8d608b81a711f *R/due_date.R
@@ -13,12 +13,12 @@ ac969f695c025fd684bdff88b646d40a *R/sysdata.rda
 068a5e50b9cf8f431e9593bc49db9c4b *R/test_date.R
 7526b49536618cfb7bedf15b92893795 *R/utils.R
 7d54925f338e8e44ba4450ca66c330d7 *README.md
-3a9e954da438a80ecb09e47bae54eff5 *build/vignette.rds
+f549a21362015838822803ab51b0e3f7 *build/vignette.rds
 088014ab29d88f9995d14441250db88f *data/medications.rda
 3e302d22cdd5f1b72d8a5bad3e636231 *data/medications_simple.rda
 16219d6ee1b8ec46d748782a87d0df26 *inst/doc/pregnancy.R
 308deb9fb1c3761a6c45b63630541ce1 *inst/doc/pregnancy.Rmd
-62ea3a341ca82b7ace96b9d3f0527852 *inst/doc/pregnancy.html
+9abea9db594febb404671472692a930d *inst/doc/pregnancy.html
 cf43addd1e60e2a947dda0d3157afb7a *man/calculate_due_date.Rd
 74966c9e048e573bb44ca2fa94072dd6 *man/calculate_test_date.Rd
 92926a799537c828f819397e364cd12f *man/date_when.Rd
@@ -37,7 +37,7 @@ bfaeeb22382318fd77f6013da8a2c194 *tests/testthat.R
 7e3f3bbc5e75c7417a152a4f2a1c1d61 *tests/testthat/test-date_when.R
 bdfa32b5af821ca8971b7250d5b8e8f1 *tests/testthat/test-due_date.R
 bcd308d66dd74962404f2472ba083381 *tests/testthat/test-grammar.R
-51e26f579765cd8b4b14eed154ef3582 *tests/testthat/test-how_far.R
+1621d948393d30e2180fd7e86f921bc3 *tests/testthat/test-how_far.R
 ecfd5850bf1dd6d1085a6bd537adfa1b *tests/testthat/test-meds.R
 c8509f1bb4095d790f4d157d574503de *tests/testthat/test-test_date.R
 215dfe5666c089e5ad3b843be64f20d5 *tests/testthat/test-utils.R

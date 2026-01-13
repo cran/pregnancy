@@ -1,6 +1,6 @@
 Package: pregnancy
 Title: Calculate and Track Dates and Medications During Pregnancy
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: 
     person(
         given = "Ella",
@@ -34,9 +34,9 @@ Config/testthat/edition: 3
 Depends: R (>= 3.5)
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2025-11-19 14:32:00 UTC; ellakaye
+Packaged: 2026-01-13 08:38:23 UTC; ellakaye
 Author: Ella Kaye [aut, cre, cph] (ORCID:
     <https://orcid.org/0000-0002-7300-3718>)
 Maintainer: Ella Kaye <ella.kaye@gmail.com>
 Repository: CRAN
-Date/Publication: 2025-11-19 15:40:02 UTC
+Date/Publication: 2026-01-13 09:10:02 UTC

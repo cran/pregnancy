@@ -355,8 +355,8 @@ sites and apps) about data privacy, tracking or advertising.</p>
 <p>To easily keep this vignette fairly up-to-date, and prevent recurring
 package build and CRAN failures as time goes by, I have not hard-coded
 any dates here. Instead, I have calculated everything from the date on
-which this vignette built. That was on <strong>November 19,
-2025</strong>, so for the purposes of reading this page, that counts as
+which this vignette built. That was on <strong>January 13,
+2026</strong>, so for the purposes of reading this page, that counts as
 “today”.</p>
 <p>The <strong>pregnancy</strong> package uses dates extensively. Any
 function argument that requires a date can either take a
@@ -381,9 +381,9 @@ for those using IVF.</p>
 <span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="co"># by default, start date of last menstrual period, but other options available</span></span>
 <span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="co"># in practice, the start_date argument will be a known date, e.g. &quot;2025-05-29&quot;</span></span>
 <span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>due_date <span class="ot">&lt;-</span> <span class="fu">calculate_due_date</span>(start_date)</span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="co">#&gt; ℹ Estimated due date: Sunday, February 15, 2026</span></span>
-<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="co">#&gt; ℹ Estimated birth period begins: January 25, 2026 (37 weeks)</span></span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="co">#&gt; ℹ Estimated birth period ends: March 01, 2026 (42 weeks)</span></span></code></pre></div>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="co">#&gt; ℹ Estimated due date: Saturday, April 11, 2026</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="co">#&gt; ℹ Estimated birth period begins: March 21, 2026 (37 weeks)</span></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="co">#&gt; ℹ Estimated birth period ends: April 25, 2026 (42 weeks)</span></span></code></pre></div>
 <p>Once a due date is know, <code>how_far()</code> tells you how far
 along the pregnancy is on a given date. It defaults to providing this
 information for the current date, but an alternative
@@ -392,15 +392,15 @@ options for how to avoid needing to pass in the <code>due_date</code>
 value every time you call these function.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">how_far</span>(<span class="at">due_date =</span> due_date)</span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="co">#&gt; ℹ You are 27 weeks and 3 days pregnant.</span></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 12 weeks and 4 days until the due date (February 15, 2026).</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 12 weeks and 4 days until the due date (April 11, 2026).</span></span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">#&gt; ℹ You are 69% through the pregnancy.</span></span>
 <span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="fu">how_far</span>(<span class="at">on_date =</span> today <span class="sc">+</span> <span class="dv">1</span>, <span class="at">due_date =</span> due_date)</span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">#&gt; ℹ On November 20, 2025, you will be 27 weeks and 4 days pregnant.</span></span></code></pre></div>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">#&gt; ℹ On January 14, 2026, you will be 27 weeks and 4 days pregnant.</span></span></code></pre></div>
 <p>The <code>date_when()</code> function gives the date when a certain
 week of pregnancy will be (or was) reached, and the duration of that
 date from today:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">date_when</span>(<span class="dv">33</span>, <span class="at">due_date =</span> due_date)</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="co">#&gt; ℹ On December 28, 2025, you will be 33 weeks pregnant.</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="co">#&gt; ℹ On February 21, 2026, you will be 33 weeks pregnant.</span></span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 5 weeks and 4 days away.</span></span></code></pre></div>
 <p>By default, the output messages from <code>how_far()</code> and
 <code>date_when()</code> are in the second person, i.e. addressed to
@@ -409,13 +409,13 @@ date from today:</p>
 first person:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">how_far</span>(<span class="at">due_date =</span> due_date, <span class="at">person =</span> <span class="dv">1</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="co">#&gt; ℹ I am 27 weeks and 3 days pregnant.</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 12 weeks and 4 days until the due date (February 15, 2026).</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 12 weeks and 4 days until the due date (April 11, 2026).</span></span>
 <span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">#&gt; ℹ I am 69% through the pregnancy.</span></span></code></pre></div>
 <p>Any other character string will be interpreted as a third-person
 name, which is useful, for example, if you’re following the pregnancy
 progress of a partner:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">date_when</span>(<span class="dv">33</span>, <span class="at">due_date =</span> due_date, <span class="at">person =</span> <span class="st">&quot;Ruth&quot;</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="co">#&gt; ℹ On December 28, 2025, Ruth will be 33 weeks pregnant.</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="co">#&gt; ℹ On February 21, 2026, Ruth will be 33 weeks pregnant.</span></span>
 <span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 5 weeks and 4 days away.</span></span></code></pre></div>
 <p>There is one further date-related function in the package, which is
 useful if you are not yet pregnant but think there’s a chance you might
@@ -424,8 +424,8 @@ be, e.g. if you are undergoing fertility treatment. This is
 date for taking a pregnancy test, based on start date (e.g. start of
 last menstural period) and test type:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">calculate_test_date</span>(today <span class="sc">-</span> <span class="dv">20</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="co">#&gt; ℹ Estimated test date (urine): Thursday, November 27, 2025</span></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="co">#&gt; ℹ Estimated test date (blood): Tuesday, November 25, 2025</span></span></code></pre></div>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="co">#&gt; ℹ Estimated test date (urine): Wednesday, January 21, 2026</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="co">#&gt; ℹ Estimated test date (blood): Monday, January 19, 2026</span></span></code></pre></div>
 </div>
 <div id="tracking-medications" class="section level2">
 <h2>Tracking medications</h2>
@@ -493,10 +493,10 @@ might look like:</p>
 <span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="co">#&gt; # A tibble: 4 × 5</span></span>
 <span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="co">#&gt;   medication format    quantity start_date stop_date </span></span>
 <span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;        &lt;dbl&gt; &lt;date&gt;     &lt;date&gt;    </span></span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="co">#&gt; 1 progynova  tablet           3 2025-11-05 2025-11-15</span></span>
-<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a><span class="co">#&gt; 2 progynova  tablet           6 2025-11-16 2025-11-26</span></span>
-<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="co">#&gt; 3 cyclogest  pessary          2 2025-11-18 2025-11-26</span></span>
-<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a><span class="co">#&gt; 4 clexane    injection        1 2025-11-23 2026-01-20</span></span></code></pre></div>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="co">#&gt; 1 progynova  tablet           3 2025-12-30 2026-01-09</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a><span class="co">#&gt; 2 progynova  tablet           6 2026-01-10 2026-01-20</span></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="co">#&gt; 3 cyclogest  pessary          2 2026-01-12 2026-01-20</span></span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a><span class="co">#&gt; 4 clexane    injection        1 2026-01-17 2026-03-16</span></span></code></pre></div>
 <p>You can then calculate the quantity of medications left to take
 grouped by either by medication (default) or format. By default, the
 calculation is for today (i.e. <code>on_date</code> =
@@ -567,7 +567,7 @@ your <code>.Rprofile</code>. The console output of
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co"># a different due date from the earlier example</span></span>
 <span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>due_date <span class="ot">&lt;-</span> today <span class="sc">+</span> <span class="dv">180</span></span>
 <span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="fu">set_due_date</span>(due_date)</span>
-<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="co">#&gt; ✔ Due date set as May 18, 2026</span></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="co">#&gt; ✔ Due date set as July 12, 2026</span></span>
 <span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="co">#&gt; ℹ Functions in the pregnancy package will now use this `due_date` option.</span></span>
 <span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a><span class="co">#&gt; ℹ So, for this R session, you do not need to supply a value to the `due_date`</span></span>
 <span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a><span class="co">#&gt;   argument (unless you wish to override the option).</span></span>
@@ -582,10 +582,10 @@ any arguments, and <code>date_when()</code> only needs the target
 week:</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">how_far</span>()</span>
 <span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="co">#&gt; ℹ You are 14 weeks and 2 days pregnant.</span></span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 25 weeks and 5 days until the due date (May 18, 2026).</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 25 weeks and 5 days until the due date (July 12, 2026).</span></span>
 <span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="co">#&gt; ℹ You are 36% through the pregnancy.</span></span></code></pre></div>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">date_when</span>(<span class="dv">20</span>)</span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="co">#&gt; ℹ On December 29, 2025, you will be 20 weeks pregnant.</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="co">#&gt; ℹ On February 22, 2026, you will be 20 weeks pregnant.</span></span>
 <span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 5 weeks and 5 days away.</span></span></code></pre></div>
 <p>To check what the option is set to, use
 <code>get_due_date()</code>.</p>
@@ -612,14 +612,14 @@ used.</p>
 <span id="cb15-11"><a href="#cb15-11" tabindex="-1"></a><span class="co">#&gt;   or with `getOption(&#39;pregnancy.person&#39;)`.</span></span>
 <span id="cb15-12"><a href="#cb15-12" tabindex="-1"></a><span class="fu">how_far</span>() <span class="co"># due_date option still set from previous section</span></span>
 <span id="cb15-13"><a href="#cb15-13" tabindex="-1"></a><span class="co">#&gt; ℹ I am 14 weeks and 2 days pregnant.</span></span>
-<span id="cb15-14"><a href="#cb15-14" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 25 weeks and 5 days until the due date (May 18, 2026).</span></span>
+<span id="cb15-14"><a href="#cb15-14" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 25 weeks and 5 days until the due date (July 12, 2026).</span></span>
 <span id="cb15-15"><a href="#cb15-15" tabindex="-1"></a><span class="co">#&gt; ℹ I am 36% through the pregnancy.</span></span>
 <span id="cb15-16"><a href="#cb15-16" tabindex="-1"></a><span class="fu">set_person</span>(<span class="cn">NULL</span>)</span>
 <span id="cb15-17"><a href="#cb15-17" tabindex="-1"></a><span class="co">#&gt; ✔ pregnancy.person option set to NULL.</span></span>
 <span id="cb15-18"><a href="#cb15-18" tabindex="-1"></a><span class="co">#&gt; ℹ The `person` argument will now default to &quot;You&quot;.</span></span>
 <span id="cb15-19"><a href="#cb15-19" tabindex="-1"></a><span class="fu">how_far</span>()</span>
 <span id="cb15-20"><a href="#cb15-20" tabindex="-1"></a><span class="co">#&gt; ℹ You are 14 weeks and 2 days pregnant.</span></span>
-<span id="cb15-21"><a href="#cb15-21" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 25 weeks and 5 days until the due date (May 18, 2026).</span></span>
+<span id="cb15-21"><a href="#cb15-21" tabindex="-1"></a><span class="co">#&gt; ℹ That&#39;s 25 weeks and 5 days until the due date (July 12, 2026).</span></span>
 <span id="cb15-22"><a href="#cb15-22" tabindex="-1"></a><span class="co">#&gt; ℹ You are 36% through the pregnancy.</span></span></code></pre></div>
 </div>
 <div id="pregnancy.medications" class="section level3">
